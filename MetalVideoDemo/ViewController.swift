@@ -6,13 +6,23 @@
 //
 
 import Cocoa
+import MetalKit
 
 class ViewController: NSViewController {
+    
+    var renderer: Renderer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        guard let metalView = view as? MTKView else {
+            fatalError()
+        }
+        do {
+            renderer = try Renderer(metalView)
+        } catch {
+            print(error)
+        }
     }
 
     override var representedObject: Any? {
@@ -20,7 +30,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 

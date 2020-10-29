@@ -11,6 +11,11 @@
 		D18EC18D254AFC100029C30B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EC18C254AFC100029C30B /* ViewController.swift */; };
 		D18EC18F254AFC120029C30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18EC18E254AFC120029C30B /* Assets.xcassets */; };
 		D18EC192254AFC120029C30B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18EC190254AFC120029C30B /* Main.storyboard */; };
+		D18EC19C254AFC810029C30B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EC19B254AFC810029C30B /* Renderer.swift */; };
+		D18EC1A0254B0B7E0029C30B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EC19F254B0B7E0029C30B /* Player.swift */; };
+		D18EC1A3254B0E000029C30B /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EC1A2254B0E000029C30B /* String+Error.swift */; };
+		D18EC1A7254B125B0029C30B /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D18EC1A6254B125B0029C30B /* Shaders.metal */; };
+		D18EC1AC254B14770029C30B /* TexturedQuad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18EC1AB254B14770029C30B /* TexturedQuad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		D18EC191254AFC120029C30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D18EC193254AFC120029C30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D18EC194254AFC120029C30B /* MetalVideoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalVideoDemo.entitlements; sourceTree = "<group>"; };
+		D18EC19B254AFC810029C30B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		D18EC19F254B0B7E0029C30B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D18EC1A2254B0E000029C30B /* String+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Error.swift"; sourceTree = "<group>"; };
+		D18EC1A6254B125B0029C30B /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		D18EC1AB254B14770029C30B /* TexturedQuad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TexturedQuad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				D18EC18A254AFC100029C30B /* AppDelegate.swift */,
+				D18EC19F254B0B7E0029C30B /* Player.swift */,
+				D18EC19B254AFC810029C30B /* Renderer.swift */,
+				D18EC1AB254B14770029C30B /* TexturedQuad.swift */,
 				D18EC18C254AFC100029C30B /* ViewController.swift */,
+				D18EC1A2254B0E000029C30B /* String+Error.swift */,
+				D18EC1A6254B125B0029C30B /* Shaders.metal */,
 				D18EC18E254AFC120029C30B /* Assets.xcassets */,
 				D18EC190254AFC120029C30B /* Main.storyboard */,
 				D18EC193254AFC120029C30B /* Info.plist */,
@@ -132,7 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18EC1AC254B14770029C30B /* TexturedQuad.swift in Sources */,
+				D18EC1A7254B125B0029C30B /* Shaders.metal in Sources */,
+				D18EC1A0254B0B7E0029C30B /* Player.swift in Sources */,
 				D18EC18D254AFC100029C30B /* ViewController.swift in Sources */,
+				D18EC1A3254B0E000029C30B /* String+Error.swift in Sources */,
+				D18EC19C254AFC810029C30B /* Renderer.swift in Sources */,
 				D18EC18B254AFC100029C30B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +228,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -262,6 +283,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
